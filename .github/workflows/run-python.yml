@@ -1,0 +1,16 @@
+name: Run Singleton
+
+on: [push]
+
+jobs:
+  run-singleton:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.14.3'
+      - name: Run main.py
+        run: |
+          python --version
+          python main.py
